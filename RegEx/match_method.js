@@ -50,7 +50,7 @@ let regex7 = /[^0-9aeiou]/ig;
 let result7 = str7.match(regex7);
 console.log(result7);
 
-// '+'
+// '+' - to look for characters that occur one or more times. 
 let str8 = "aabcadaAa";
 let regex8 = /a+/ig;
 
