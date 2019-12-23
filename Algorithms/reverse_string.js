@@ -1,4 +1,4 @@
-// Time Complexity: O(log n)
+// Time Complexity: O(n), really O(n/2)
 // Space Compexity: O(1)
 function reverseString (s) {
   for (let i = 0; i < Math.floor(s.length / 2); i++) {
