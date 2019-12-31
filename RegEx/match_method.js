@@ -83,15 +83,15 @@ let regex13 = /t[a-z]*o/;
 let result13 = str13.match(regex13);
 console.log(result13);
 
-// Lazy match: Finds shortest possible part of string ('?') 
+// Lazy match: Finds shortest possible part of string: ? 
 let result14 = str13.match(/t[a-z]*?o/);
 console.log(result14);
 
 // HTML string pattern matching example
 let result15 = "<h1>Hello World!</h1>".match(/<.*?>/);
-console.log(result15);
+console.log("result15>", result15);
 
-// Match beginning string patterns (^)
+// Match beginning string patterns: ^
 let str16 = "Hello World!!!!";
 let regex16 = /^Hello/;
 let result16 = str16.match(regex16);
@@ -104,16 +104,56 @@ let result18 = str18.match(regex16);
 console.log(result18);
 console.log(regex16.test(str18));
 
-// Match ending string patterns ($)
+// Match ending string patterns: $
 let result19 = /World.*$/.test(str18);
 console.log(result19);
 
-// Match ALL letters and numbers aka 'alphanumerics (\w)
+// Match ALL letters and numbers aka 'alphanumerics: \w
 let str20 = "Matching all letters_numbers???";
 let regex20 = /[A-Za-z0-9_]+/g; //Long hand version
 console.log(str20.match(regex20));
 let regex21 = /\w+/g; //Short hand version
 console.log(str20.match(regex21));
 
-// Negate alphanumerics (\W)
+// Negate alphanumerics: \W
 console.log(str20.match(/\W+/g));
+
+// Match ALL numbers: \d
+// Match ALL non-numbers: \D
+
+// Match Whitespace: \s
+// Same as doing: [\r\t\f\n\v]
+// Negate version: \S
+let str22 = "Whitespace experimenting is taking place now.";
+
+let result22 = str22.match(/\s/g);
+console.log(result22);
+
+let str23 = "Whitespace experimenting: \n is taking place now.";
+let result23 = str23.match(/\s/g);
+console.log(result23);
+
+// Find range of patterns: Quantity specifiers: {lower_num, upper_num}
+// If just lower bound: {lower_num,}
+// If limited exact number: {num}
+let str24 = "ooooh";
+let regex24 = /o{3,6}h/;
+
+let result24 = str24.match(regex24);
+console.log(result24);
+console.log(regex24.test("ooh"));
+
+// Optional search: ?
+let str25 = "colour";
+let str26 = "color";
+let regex25 = /colou?r/;
+
+console.log(regex25.test(str25));
+console.log(regex25.test(str26));
+
+// Lookaheads
+// Positive lookahead: ?=...
+// Negative lookahead: ?!...
+let password = "hello_123";
+let passwordChecker = /(?=\w{3,6})(?=\D*\d{3})/;
+console.log(passwordChecker.test(password));
