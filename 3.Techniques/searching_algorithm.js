@@ -1,3 +1,5 @@
+// SEARCHING ALGORITHM
+
 // Task#1 : Linear Search
 
 // Time complexity: O(n)
