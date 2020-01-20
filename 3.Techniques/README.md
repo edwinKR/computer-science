@@ -22,6 +22,7 @@
 ***Bubble Sort***
 - Loop through an array by comparing the adjacent indices.
 - As you are iterating through the array, swap the greater value to the end.
+- It's a very naive sorting approach and wouldn't really want to use this alrogirhtm in real world practice.
 
 ***Insertion Sort***
 - 

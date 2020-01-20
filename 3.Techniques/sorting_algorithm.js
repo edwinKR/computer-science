@@ -1,3 +1,5 @@
+// Task#1: Merge Sort
+
 // Overall time complexity: O(n * log n)
 function mergeSort(list) {
   // base case
@@ -36,4 +38,36 @@ function merge(left, right) {
 }
 
 const test1 = mergeSort([7, 6, 1, 12, 34, 3, 2]);
-console.log(test1);
+console.log("Merge Sort Result ====> ", test1);
+
+
+// Task#2: Bubble Sort
+// Time Complexity: 0(n^2)
+// Space Complexity: O(1)
+function bubbleSort(list) {
+  let isSorted = false;
+  let lastListLength = list.length;
+
+  while (!isSorted) {
+    isSorted = true;
+    for (let i = 0; i < lastListLength; i++) {
+      if (list[i] > list[i + 1]) {
+        swap(list, i, i + 1);
+        isSorted = false;
+        lastListLength--;
+      }
+    }
+  }
+  
+  return list;
+}
+
+// Helper method to swap adjacent elements in a given list.
+function swap(array, i, j) {
+  const temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
+}
+
+const test2 = bubbleSort([7, 6, 1, 12, 34, 3, 2]);
+console.log("Bubble Sort Result ===> ", test2);
