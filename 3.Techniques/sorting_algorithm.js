@@ -41,7 +41,7 @@ const test1 = mergeSort([7, 6, 1, 12, 34, 3, 2]);
 console.log("Merge Sort Result ====> ", test1);
 
 
-// Task#2: Bubble Sort
+// Task#2: Bubble Sort (Not a divide & conquer sorting algorithm.)
 // Time Complexity: 0(n^2)
 // Space Complexity: O(1)
 function bubbleSort(list) {
@@ -58,7 +58,7 @@ function bubbleSort(list) {
       }
     }
   }
-  
+
   return list;
 }
 
