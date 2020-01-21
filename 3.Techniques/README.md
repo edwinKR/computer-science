@@ -24,7 +24,7 @@
 - It's a very naive sorting approach and wouldn't really want to use this alrogirhtm in real world practice.
 
 ***Insertion Sort***
-- 
+- _TBD_ 
 
 **Type 2. Divide & Conquer Sorts**
 
