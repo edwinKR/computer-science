@@ -23,12 +23,12 @@ _(*) Logarithmic: As the input increases, the time complexity increases in a fra
 **Native methods in JavaScript**
 
 ***O(n): Constant Time***
-- `.pop()`
+- `.pop()` | `.length()` | `.push()` 
 - Lookup of an array: Reading an element at a specific i7:00ndex of an array. 
 - Lookup of an object: Reading a value for specific key of an object.
 
 ***Other***
 - `.shift()` | `.unshift()` : O(n)
-- Methods like `.forEach()`, `.reduce()`, `.map()` are under the hood really just regular loops. Therefore, it would be O(n). However! Such methods accept callback functions. Hence, depending on the operation of the callback, the time complexity could change and become more complex.
+- Methods like `.forEach()`, `.reduce()`, `.map()` are under the hood really just regular loops. Therefore, it would be Linear: O(n). However! Such methods accept callback functions. Hence, depending on the operation of the callback, the time complexity could change and become more complex.
 - `.sort()` : O(n * log n)
 
