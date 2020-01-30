@@ -31,4 +31,5 @@ _(*) Logarithmic: As the input increases, the time complexity increases in a fra
 - `.shift()` | `.unshift()` : O(n)
 - Methods like `.forEach()`, `.reduce()`, `.map()` are under the hood really just regular loops. Therefore, it would be Linear: O(n). However! Such methods accept callback functions. Hence, depending on the operation of the callback, the time complexity could change and become more complex.
 - `.sort()` : O(n * log n)
+  - Good read on the sorting data structure used in different browsers. ([Link 1](https://stackabuse.com/sorting-arrays-in-javascript/) | [Link 2](https://www.guru99.com/quicksort-in-javascript.html))
 
