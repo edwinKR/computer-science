@@ -24,7 +24,7 @@ _(*) Logarithmic: As the input increases, the time complexity increases in a fra
 
 ***O(n): Constant Time***
 - `.pop()` | `.length()` | `.push()` 
-- Lookup of an array: Reading an element at a specific i7:00ndex of an array. 
+- Lookup of an array: Reading an element at a specific index of an array. 
 - Lookup of an object: Reading a value for specific key of an object.
 
 ***Other***
