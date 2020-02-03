@@ -37,12 +37,12 @@
 ### Greedy Algorithm
 - Always making the "locally" optimal choice.
 - Safer to use "Brute Force Approach" rather than the "greedy approach".
-- But even so, when datasets are too large, greedy solution although not being the correct solution, it still might be the good enough solution. 
+- But even so, when datasets are too large, greedy solution although not being the correct solution, still might be the good enough solution. 
 
 ### Dynamic Programming Technique ###
 - Data optimization technique.
 - Breaking problem into optimal substructure which tends to be recursive. (Overlapping subproblems)
-- With the repeated overlapping solutions, you can caches those values to avoid repeated calculations.
+- With the repeated overlapping solutions, you can cache those values to avoid repeated calculations.
 
 ***2 types of approach***
 1. Top-down recursive technique

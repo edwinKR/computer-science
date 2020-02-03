@@ -33,3 +33,5 @@ _(*) Logarithmic: As the input increases, the time complexity increases in a fra
 - `.sort()` : O(n * log n)
   - Good read on the sorting data structure used in different browsers. ([Link 1](https://stackabuse.com/sorting-arrays-in-javascript/) | [Link 2](https://www.guru99.com/quicksort-in-javascript.html))
 
+**Resources**
+[Big O Cheat Sheet](https://www.bigocheatsheet.com/)

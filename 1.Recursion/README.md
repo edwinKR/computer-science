@@ -18,5 +18,5 @@ Recursion
 - Type of 'Caching'
 - Memoization is caching the value that a function returns
 - In JavaScript environtment, caching in the simplest form is saving something into an object or array
-- With caching, you are always making the tradeoff between time and space. It's faster, but takes more space.
+- With caching, you are always making the trade-off between time and space. It's faster, but takes more space.
 - Again, unlike other programming languages where memory has impact on performance, in the JavaScript environtment, we usually think about time complexity unless the data is just massive. Hence, caching is usually a good idea.
