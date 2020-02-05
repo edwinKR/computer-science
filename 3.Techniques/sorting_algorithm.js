@@ -54,9 +54,9 @@ function bubbleSort(list) {
       if (list[i] > list[i + 1]) {
         swap(list, i, i + 1);
         isSorted = false;
-        lastListLength--;
       }
     }
+    lastListLength--;
   }
 
   return list;
