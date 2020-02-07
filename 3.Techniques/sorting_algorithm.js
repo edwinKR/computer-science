@@ -18,7 +18,7 @@ function mergeSort(list) {
   return merge(leftSorted, rightSorted);
 }
 
-// Helper method to merge sub lists
+// Helper function to merge sub lists
 function merge(left, right) {
   const result = [];
   let leftIndex = 0;
@@ -62,7 +62,7 @@ function bubbleSort(list) {
   return list;
 }
 
-// Helper method to swap adjacent elements in a given list.
+// Helper function to swap adjacent elements in a given list.
 function swap(array, i, j) {
   const temp = array[i];
   array[i] = array[j];
@@ -71,3 +71,39 @@ function swap(array, i, j) {
 
 const test2 = bubbleSort([7, 6, 1, 12, 34, 3, 2]);
 console.log("Bubble Sort Result ===> ", test2);
+
+
+// Task#3: Quick Sort (Divide & conquer sorting algorithm.)
+// Time Complexity: Worst Case - 0(n^2) | Average Case - O(n*log(n))
+// Space Complexity: Worse Case - O(n) | Average Case - O(log(n))
+function quickSort(array, begin = 0, end = array.length - 1) {
+  // Base Case
+  if (begin >= end) {
+    return;
+  } 
+
+  let partitionIndex = partition(array, begin, end);
+  quickSort(array, begin, partitionIndex - 1); // Sort left partition
+  quickSort(array, partitionIndex + 1, end); // Sort right partition
+  return array;
+}
+
+// Helper function to find the parition inndex on the array.
+function partition(array, begin, end) {
+  // Need to select a pivot. There are several ways on selecting a pivot. We will select the last index element.
+  let pivot = array[end];
+  let partitionIndex = begin;
+
+  for (let i = begin; i < end; i++) {
+    if (array[i] <= pivot) {
+      swap(array, i, partitionIndex);
+      partitionIndex++;
+    }
+  }
+
+  swap(array, partitionIndex, end);
+  return partitionIndex;
+}
+
+const test3 = quickSort([12, 3, 1, 6, 23, 12]);
+console.log("Quick Sort Result ===> ", test3);

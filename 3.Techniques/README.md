@@ -21,7 +21,7 @@
 ***Bubble Sort***
 - Loop through an array by comparing the adjacent indices.
 - As you are iterating through the array, swap the greater value to the end.
-- It's a very naive sorting approach and wouldn't really want to use this alrogirhtm in real world practice.
+- It's a very naive sorting approach and wouldn't really want to use this algorithm in real world practice.
 
 ***Insertion Sort***
 - _TBD_ 
@@ -33,6 +33,17 @@
 - Time Complexity: O(n*log(n))
 - Note: Recursion for dividing into sub-lists, it is O(log n) time. However, when merging and returning through each stack, it would be sorting linearly with O(n).
 - Mergesort is the best sort!
+
+***Quick Sort***
+- Very efficient for large data sets.
+- Time Complexity: Average O(n*log(n)) | Worst Case O(n^2)
+- Performance depends largely on the selection of the "pivot"
+- Selection of Pivot (5 approaches)
+  - First index element of the data set. (Can be worst performance)
+  - Last index element of the data set. (Can be worst performance)
+  - Middle index element of the data set.
+  - Median index element of the data set.
+  - Random index element of the data set. (Usually works the best for large data sets. Also, ensures O(n*log(n) performance))
 
 ### Greedy Algorithm
 - Always making the "locally" optimal choice.
