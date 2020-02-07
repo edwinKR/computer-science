@@ -1,6 +1,7 @@
 // Task#1: Merge Sort
 
 // Overall time complexity: O(n * log n)
+// Space complexity: O(n)
 function mergeSort(list) {
   // base case
   if (list.length < 2) {
