@@ -12,8 +12,8 @@ class BinaryTree {
     this.root = null;
   }
 
-  insert(val) {
-    const newNode = new Node(val);
+  insert(value) {
+    const newNode = new Node(value);
 
     // If tree root is empty, in other words, brand new.
     if (this.root === null) {
@@ -26,8 +26,8 @@ class BinaryTree {
     return this.root;
   }
 
-  remove(val) {
-    this.removeNodeFromTree(this.root, val);
+  remove(value) {
+    this.removeNodeFromTree(this.root, value);
     return this.root;
   }
 
@@ -105,6 +105,37 @@ class BinaryTree {
 
     return this.findMinValueNode(currentNode.left);
   }
+
+  // Depth-First-Search(DFS) Traversal Approaches
+  // DFS#1: In-order Traversal - Traverse left subtree of current node -> Visit current(root) node -> Traverse right subtree of current nodes
+  printInOrder(currentNode) {
+    if (currentNode !== null) {
+      this.printInOrder(currentNode.left);
+      console.log(currentNode.value);
+      this.printInOrder(currentNode.right);
+    }
+    return;
+  }
+
+  // DFS#2: Pre-order Traversal - Visit current(root) node -> Traverse left subtree of current node -> Traverse right subtree of current nodes
+  printPreOrder(currentNode) {
+    if (currentNode !== null) {
+      console.log(currentNode.value);
+      this.printPreOrder(currentNode.left);
+      this.printPreOrder(currentNode.right);
+    }
+    return;
+  }
+
+  // DFS#3: Post-order Traversal - Traverse left subtree of current node -> Traverse right subtree of current nodes -> Visit current(root) node
+  printPostOrder(currentNode) {
+    if (currentNode !== null) {
+      this.printPostOrder(currentNode.left);
+      this.printPostOrder(currentNode.right);
+      console.log(currentNode.value);
+    }
+    return;
+  }
 }
 
 // Create a tree
@@ -124,4 +155,9 @@ theTree.insert(4);
 
 // Remove a node from tree.
 theTree.remove(9);
-console.log(theTree.root);
+// console.log(theTree.root);
+
+// DFS Traversals
+theTree.printInOrder(theTree.root);
+theTree.printPreOrder(theTree.root);
+theTree.printPostOrder(theTree.root);
