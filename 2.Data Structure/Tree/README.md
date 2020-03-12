@@ -3,18 +3,25 @@
 - A tree is a collection of "NODES" connected by some edges.
 - It's a "non-linear" data structure.
 
-**Balanced Binary Search Tree**
+**Binary Tree**
 
-- During interviews, most likely we will assume that there is a given Balanced Binary Tree.
-- insert(): Time O(log n)
-- find(): Time O(log n)
+- A tree where a node can have a maximum of two children.
 
-**Unbalanced Tree**
+**Binary Search Tree**
 
-- insert(): Time O(n)
-- find(): Time O(n)
+- A binary tree where:
+  - node.left.value < node.value
+  - node.right.value > node.value
+- During interviews, most likely we will assume that there is a given Balanced Binary Search Tree.
+  - insert(): Time O(log n)
+  - find(): Time O(log n)
 
-**Traversing through a tree**
+**Unbalanced(skewed) Tree**
+
+- insert(): Time O(h)
+- find(): Time O(h)
+
+**Traversing through a binary search tree**
 **_3 Common ways to do so._**
 
 - In-order
@@ -26,5 +33,5 @@
   - Left nodes -> Right nodes -> Current(root) node
 
 - Typyically in Binary Search Trees, you want to do a "In-order Traversal" Why?
-  - This would then allow to print nodes in order. (
-  - Example: root would be 2, left child would be 1, right child would be 3)
+  - This would then allow to print nodes in order.
+  - Example: root would be 2, left child would be 1, right child would be 3
