@@ -136,6 +136,41 @@ class BinaryTree {
     }
     return;
   }
+
+  // Breadth-First-Search(BFS) Traversal Approach
+  printBFS(currentNode) {
+    const result = [];
+
+    if (currentNode === null) {
+      return result;
+    }
+
+    // The queue keeps track of the nodes to be ran as traversing through the tree.
+    const queue = [currentNode];
+    while (queue.length > 0) {
+      // When done with traversing through each node of the entire tree, there is no more nodes to run and the queue should be empty.
+      const currentQueueSize = queue.length;
+
+      for (let i = 0; i < currentQueueSize; i++) {
+        // Pop out the very first node to be ran in the queue.
+        const currentNodeToObserve = queue.shift();
+        // Push the the value of the node.
+        result.push(currentNodeToObserve.value);
+
+        if (currentNodeToObserve.left) {
+          // If there's a sub-node(left child node), then that node should be pushed into the queue.
+          queue.push(currentNodeToObserve.left);
+        }
+
+        if (currentNodeToObserve.right) {
+          // If there's a sub-node(right child node), then that node should be pushed into the queue.
+          queue.push(currentNodeToObserve.right);
+        }
+      }
+    }
+    console.log(result);
+    return result;
+  }
 }
 
 // Create a tree
@@ -161,3 +196,6 @@ theTree.remove(9);
 theTree.printInOrder(theTree.root);
 theTree.printPreOrder(theTree.root);
 theTree.printPostOrder(theTree.root);
+
+// BFS Traversals
+theTree.printBFS(theTree.root);
