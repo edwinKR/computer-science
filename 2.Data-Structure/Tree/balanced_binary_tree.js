@@ -111,7 +111,7 @@ class BinaryTree {
   printInOrder(currentNode) {
     if (currentNode !== null) {
       this.printInOrder(currentNode.left);
-      console.log(currentNode.value);
+      // console.log(currentNode.value);
       this.printInOrder(currentNode.right);
     }
     return;
@@ -120,7 +120,7 @@ class BinaryTree {
   // DFS#2: Pre-order Traversal - Visit current(root) node -> Traverse left subtree of current node -> Traverse right subtree of current nodes
   printPreOrder(currentNode) {
     if (currentNode !== null) {
-      console.log(currentNode.value);
+      // console.log(currentNode.value);
       this.printPreOrder(currentNode.left);
       this.printPreOrder(currentNode.right);
     }
@@ -132,7 +132,7 @@ class BinaryTree {
     if (currentNode !== null) {
       this.printPostOrder(currentNode.left);
       this.printPostOrder(currentNode.right);
-      console.log(currentNode.value);
+      // console.log(currentNode.value);
     }
     return;
   }
@@ -168,21 +168,26 @@ class BinaryTree {
         }
       }
     }
-    console.log(result);
+    // console.log(result);
     return result;
   }
 }
 
 // Create a tree
 const theTree = new BinaryTree();
-const listOfValues = [10, 3, 30, 2, 9, 7, 5, 20, 50];
-function generateTree(listOfValues) {
-  listOfValues.forEach(value => {
-    theTree.insert(value);
+const listOfValues1 = [10, 3, 30, 2, 9, 7, 5, 20, 50];
+
+const theTree2 = new BinaryTree();
+const listOfValues2 = [10, 3, 30, 2, 9, 7, 5, 20, 50];
+
+function generateTree(tree, listOfValues) {
+  listOfValues.forEach((value) => {
+    tree.insert(value);
   });
 }
-generateTree(listOfValues);
 
+generateTree(theTree, listOfValues1);
+generateTree(theTree2, listOfValues2);
 // Insert a node into the tree.
 theTree.insert(8);
 // console.log(theTree.root.left.right);
@@ -199,3 +204,5 @@ theTree.printPostOrder(theTree.root);
 
 // BFS Traversals
 theTree.printBFS(theTree.root);
+
+module.exports = { BinaryTree, theTree2 };
